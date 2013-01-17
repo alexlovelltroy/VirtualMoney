@@ -74,6 +74,13 @@ table {
     border-spacing: 0;
 }
 
+.blue {
+    color: #0000FF;
+}
+.red {
+    color: #FF0000;
+}
+
 /*
     Now here is when interesting things start to appear.
     
@@ -174,6 +181,7 @@ a:focus {
     -ms-box-sizing:     border-box;
     -o-box-sizing:      border-box;
     box-sizing:         border-box;
+    -webkit-transform: translate3d(0, 0, 0);
 
     font-family: 'PT Serif', georgia, serif;
     font-size: 48px;
@@ -239,6 +247,132 @@ a:focus {
     white-space: nowrap;
 }
 
+.slide p {
+  margin: 0;
+  padding: 0;
+
+  margin-top: 20px;
+}
+.slide p:first-child {
+  margin-top: 0;
+}
+
+.slide h1 {
+  font-size: 60px;
+  line-height: 60px;
+
+  padding: 0;
+  margin: 0;
+  margin-top: 200px;
+  padding-right: 40px;
+
+  font-weight: 600;
+
+  letter-spacing: -3px;
+
+  color: rgb(51, 51, 51);
+}
+
+.slide h2 {
+  font-size: 45px;
+  line-height: 45px;
+
+  position: absolute;
+  bottom: 150px;
+
+  padding: 0;
+  margin: 0;
+  padding-right: 40px;
+
+  font-weight: 600;
+
+  letter-spacing: -2px;
+
+  color: rgb(51, 51, 51);
+}
+
+.slide h3 {
+  font-size: 30px;
+  line-height: 36px;
+
+  padding: 0;
+  margin: 0;
+  padding-right: 40px;
+
+  font-weight: 600;
+
+  letter-spacing: -1px;
+
+  color: rgb(51, 51, 51);
+}
+.slide ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  margin-top: 40px;
+
+  margin-left: .75em;
+}
+.slide ul:first-child {
+  margin-top: 0;
+}
+.slide ul ul {
+  margin-top: .5em;
+}
+.slide li {
+  padding: 0;
+  margin: 0;
+
+  margin-bottom: .5em;
+}
+.slide li::before {
+  content: '·';
+
+  width: .75em;
+  margin-left: -.75em;
+
+  position: absolute;
+}
+
+pre {
+  font-family: 'Droid Sans Mono', 'Courier New', monospace;
+
+  font-size: 20px;
+  line-height: 28px;
+  padding: 5px 10px;
+  
+  letter-spacing: -1px;
+
+  margin-top: 40px;
+  margin-bottom: 40px;
+
+  color: black;
+  background: rgb(240, 240, 240);
+  border: 1px solid rgb(224, 224, 224);
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, .1);
+  
+  overflow: hidden;
+}
+
+code {
+  font-size: 45%;
+  font-family: 'Droid Sans Mono', 'Courier New', monospace;
+
+  color: black;
+}
+/* Builds */
+
+.build > * {
+  transition: opacity 0.5s ease-in-out 0.2s;
+  -o-transition: opacity 0.5s ease-in-out 0.2s;
+  -moz-transition: opacity 0.5s ease-in-out 0.2s;
+  -webkit-transition: opacity 0.5s ease-in-out 0.2s;
+}
+
+.to-build {
+  opacity: 0;
+}
 /*
     And now we start to style each step separately.
     
@@ -250,11 +384,11 @@ a:focus {
     3D positioning along Z axis.
 */
 
-#title {
+.bigtitle {
     padding: 0;
 }
 
-#title .try {
+.bigtitle .try {
     font-size: 64px;
     position: absolute;
     top: -0.5em;
@@ -267,7 +401,7 @@ a:focus {
     transform:         translateZ(20px);
 }
 
-#title h1 {
+.bigtitle h1 {
     font-size: 190px;
     
     -webkit-transform: translateZ(50px);
@@ -277,7 +411,7 @@ a:focus {
     transform:         translateZ(50px);
 }
 
-#title .footnote {
+.bigtitle .footnote {
     font-size: 32px;
 }
 
@@ -408,6 +542,7 @@ a:focus {
     background-position: bottom right;
     background-repeat: no-repeat;
 }
+
 
 #source q {
     font-size: 60px;
